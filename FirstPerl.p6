@@ -82,3 +82,29 @@ say "@rangeArray";
 # Remove elements 2 through 5
 my @removedElements = splice(@rangeArray, 1, 4);
 say "@rangeArray";
+
+# Split arrays : converts string to an array depending on delimiter
+my $string = "Hello=World";
+my @string = split("=", $string);
+say "@string";
+
+# Join arrays
+my @joinArray = (3, 2, 1);
+my $joinArray = join (", ", @joinArray);
+say "$joinArray";
+
+# Sorting arrays
+my @sortedArray = sort(@joinArray);
+say "@sortedArray";
+
+# DEPRECATED
+# Changing the starting index from 0 to 1
+# $[ = 1;
+# say "$sortedArray[1]";
+
+# Merging arrays
+my @arr1 = (1, 2, 3);
+my @arr2 = (4, 5, 6);
+
+my @mergedArray = (@arr1, @arr2);
+say "@mergedArray";
