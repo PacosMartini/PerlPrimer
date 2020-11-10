@@ -112,9 +112,6 @@ say "@mergedArray";
 # Hashes : K, V pairs
 my %firstHash = (Key1 => "Value1", Key2 => "Value2");
 
-# Check for existence
-# say exist $firstHash{Key1};
-
 # Add pair to hash
 $firstHash{Key3} = "Value3";
 
