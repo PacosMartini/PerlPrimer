@@ -108,3 +108,62 @@ my @arr2 = (4, 5, 6);
 
 my @mergedArray = (@arr1, @arr2);
 say "@mergedArray";
+
+# Hashes : K, V pairs
+my %firstHash = (Key1 => "Value1", Key2 => "Value2");
+
+# Check for existence
+# say exist $firstHash{Key1};
+
+# Add pair to hash
+$firstHash{Key3} = "Value3";
+
+# Get keys and values from hash (no particular order)
+my @hashKeys = keys %firstHash;
+say "Keys: @hashKeys (Added Key3)";
+my @hashValues = values %firstHash;
+say "Values: @hashValues (Removed Value3)";
+
+# If-statement
+if (exists($firstHash{Key3})){
+    say "Key3 exists";
+} else {
+    say "Key3 does not exist";
+}
+
+# Size of Hash
+say "Hash size: ", scalar @hashKeys;
+
+# Delete pair from hash
+delete $firstHash{Key3};
+
+# Get keys and valuesfrom hash (no particular order)
+@hashKeys = keys %firstHash;
+say "Keys: @hashKeys (Removed Key3)";
+@hashValues = values %firstHash;
+say "Values: @hashValues (Removed Value3)";
+
+# Negated If-statement
+if (!exists($firstHash{Key3})){
+    say "Key3 does not exist";    
+} else {
+    say "Key3 exists";
+}
+
+# Size of Hash
+say "Hash size: ", scalar @hashKeys;
+
+# Chomp : removes newline at the end of each scalar [in an array] [and end of each value in a hash]
+print "Enter a skill: ";
+my $input = <STDIN>;
+print "$input";
+my $chomped = chomp($input);
+print "$input";
+say "Removed : $chomped newline";
+
+# Chop : removes last character at the end of each scalar [in an array] [and end of each value in a hash]
+my $chopInput = "Start";
+say "$chopInput";
+my $chopped = chop($chopInput);
+say "$chopInput";
+say "Removed : $chopped";
